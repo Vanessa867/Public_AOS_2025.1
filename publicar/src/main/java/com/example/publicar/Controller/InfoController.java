@@ -17,7 +17,7 @@ public class InfoController {
     @GetMapping
     public Map<String, Object> getInfo(){
         RestTemplate restTemplate = new RestTemplate();
-        String apiUrl = "https://api.thecatapi.com/v1/images/search";
+        String apiUrl = "https://dog.ceo/api/breeds/image/random";
         return  restTemplate.getForObject(apiUrl, Map.class);
     }
 }
