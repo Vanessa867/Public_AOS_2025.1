@@ -1,7 +1,6 @@
 package com.example.publicar.Controller;
 
 
-import lombok.Value;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,9 +15,9 @@ import java.util.Map;
 public class InfoController {
 
     @GetMapping
-    public Map<String, Object> getInfo() {
+    public Map<String, Object> getInfo(){
         RestTemplate restTemplate = new RestTemplate();
         String apiUrl = "https://dog.ceo/api/breeds/image/random";
-        return restTemplate.getForObject(apiUrl, Map.class);
+        return  restTemplate.getForObject(apiUrl, Map.class);
     }
 }
